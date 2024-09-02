@@ -1,0 +1,234 @@
+
+
+JAVA:
+=======
+
+
+
+language:
+=========
+		communication with human
+		english,telugu,tamil,kannada,hindi.....
+
+Programming Lanugage:
+=====================
+		communication with machine
+		
+		software-->set of programs/instrutions
+
+
+		POP 									OOP
+	B,BCPL,C,COBOL,PASCAL,PHOTON...	      C++,JAVA,.NET,Python.....
+		
+				performance  		inheritance,polymorphisam
+				security			encapsulation,abstraction...
+				
+				
+	Why JAVA?	
+			
+			1.platform independent
+			2.Garbage Collection	-->garbage collector  c,C++
+				
+				
+					WORA    python,net
+					
+						windows11
+						machine1  java app			
+					
+					
+			window7			linux
+			machine2		machine3
+			  A					B
+			  
+			  pyc
+					java 21	 java 22
+			  
+			java installation  sun micro system--->oracle  corporation
+			
+				1996 JDK 1.0		James Gosling
+			
+				
+					JDK 22		OAK
+					
+					JAVA 8 
+					
+											JAVA
+					JSE						 JEE											JME	
+				corejava,swings,applets...	Servlets,JSP,spring(framework),webservices		android
+							
+			1.standalone apps/desktop apps   vlc mediaplayer,anti virus	
+					
+			2.web apps								
+			
+			3.Distributed apps		
+				
+			4.mobile apps
+					
+				java	
+					JDK--->JRE-->JVM(execute)
+					
+					
+	Welcome to java 
+
+
+	Welcome.java 
+	class Welcome
+	{
+	public static void main(String args[])
+	{
+	System.out.println("welcome to java");//printing statement
+	}
+	
+	}
+	1.classnames/interfaces must start start uppercase letter ex:TestExample,HashMap,LinkedHashMap
+	2.methods/variables should start with lowercase and rest of the words uppercase Ex:addOfTwo(),ageOfPerson
+	
+
+Identifiers:
+============
+	any  name in java will call it as identifier
+	
+		variable name,methodname,classname ,interface ,label.....
+
+
+	a-z
+	A-Z
+	0-9
+	$
+	_
+
+
+Variables/Data Types:
+===================== static typed PL
+
+	variable is a name of memory location
+	
+	syntax:
+			datatype varname=value; 
+			
+				datatype varname;//declaration
+				varname=value;//intialization
+				
+				
+				
+				Premitive DT		     NPDT
+			8							String,student,emp,arr...	
+				
+		byte    1 byte    -128 to 127
+		short	2 bytes	 -32768 to 32767		number
+		int     4 bytes	 -2147483648 to 2147483647
+		long    8 bytes  9223372036854775808  to  9223372036854775807
+		
+		float   4 bytes		float salary=12.21332143564565f; 5-6 
+		double  8 bytes     14-15 decimal 
+		
+		boolean	1 bit true-1 false-0		
+		char    2 bytes english-->ASCII
+						UNICODE-->18 
+		
+				
+					long aadhar=92384023848032; 7 bytes
+				
+				
+				local -->the variable defined inside the method
+				
+				global-->the variable defined outside the method
+				
+				
+Flow Control Statements:
+=======================
+					if
+					else
+					switch
+					for
+					while
+					do
+					case
+					default
+					break
+					continue
+				
+				
+				
+				
+				
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+		
+		
+		
+		java-->keywords-->53--->lowercase 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+					
+					
+					
+					
+					
+					
+				
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				

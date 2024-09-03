@@ -76,7 +76,7 @@ Programming Lanugage:
 	{
 	public static void main(String args[])
 	{
-	System.out.println("welcome to java");//printing statement
+	
 	}
 	
 	}
@@ -149,41 +149,98 @@ Flow Control Statements:
 					continue
 				
 				
+		IDE		--->eclipse,netbeans,myeclipse,vscode,intellji...
 				
 				
 				
 				
-				
 
 
 
 
 
+Arrays:
+=========
+	used to group values
+	i can hold only similar values
+
+	int marks=123;
+		int marks1[]= {12,32,12,54,66,33,97};//0,1,2,3,4,5,6  array literal--smilar type
+		int marks2[]=new int[5];//0
+		marks2[0]=123;
+		marks2[1]=22;
+		marks2[3]=54;
+		
+		System.out.println(marks1[3]);
+		System.out.println(marks2[3]);
+		System.out.println(marks2[5]);//AIOE
+		System.out.println(marks);
+		
+java-->keywords-->53--->lowercase 
 
 
+instance and static :
+=====================
+	
+		local
+		
+		global--instance and static
+		
+	
+	syntax
+		we will use static keyword  to define static properties(variable,method,block)
+		if there is no static keywrod that is instance/non-static
+	
 
-
-
-
-
+	memory
+		static variable will get memory only once at the time of class loading into JVM.
+		instance variable will get memory for every object creation
+		
+		class--collection of data members and member functions
+			object -->instance of a class
+		
+			classname objname=new classname();
+			Test obj=new Test();
+	
+	Access
+		static properties can be accessed by using class name
+		instance  properties can be accessed by using obj name
 	
 	
 	
+	Usage
+		contryname,orgname,schoolname...
+
+		for common data where one time memory is enough will go with static.
+		for unique data where different memory is required for every instance will go with instance.
+		
+		
+		
+methods		
+		it is block of statements
+		
+		
+package(folder)	,import
+
+package com.ericsson.corejava
+
+
+
+NOTE:By default package for every java file is java.lang
+
+		
+Scanner/dynamic input		
+		
+	public class Test {
+public static void main(String[] args) {//"12",13
+	//wrapper clsses 8 DT 8
+	int a=Integer.parseInt(args[0]);
+	int b=Integer.parseInt(args[1]);
+	int result=a+b;
+	System.out.println("Add of two numbers :"+result);
+}
+}
 	
-	
-		
-		
-		
-		java-->keywords-->53--->lowercase 
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		

@@ -226,10 +226,11 @@ package com.ericsson.corejava
 
 
 
-NOTE:By default package for every java file is java.lang
-
+NOTE:
+1)By default package for every java file is java.lang
+2)By Default parent class for every java class is java.lang.Object
 		
-Scanner/dynamic input		
+Scanner/dynamic input		java.util
 		
 	public class Test {
 public static void main(String[] args) {//"12",13
@@ -241,41 +242,79 @@ public static void main(String[] args) {//"12",13
 }
 }
 	
+OOPS:
+======		
+1)Inheritance
+2)Polymorphisam
+3)abstraction
+4)encapsualtion
+		
+		
+					
+		Inheritance:
+		============	Code Reusability
+		extends,implements
+		
+		class Test		//parent
+		{
+		
+		200 methods
+		
+		}
+					
+		class Hello extends Test{ //child
 		
 		
 		
-					
-					
-					
-					
+		}		
 					
 					
 				
+		Java Doesnt support multiple inheritance through classes
+		Java  support multiple inheritance through interfaces
+		
+			  
+			  
+abstract methods:without implementation/body/logic
+concrete methods:with implementation/body/logic (non-abstract)			  
+			  
+			  
+			  
+		public abstract void m1();	  -->abstraction-->hiding
+						  
+							class				-->only concrete/implemented methods		  
+			0-100%			abstract classes 	-->combination of both abstract and concrete methods
+			100%			interfaces			-->only abstract methods
+			  
+								by default interface methods are public abstract
+								by default interface variables are public static final
 			  
 			  
 			  
 			  
 			  
 			  
+			  X						Y
+			  class Parent1         class Parent2
+			  {						{
+			  
+			  m1()					m1()
 			  
 			  
 			  
 			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
+			  }						}
 					
-					
-					
+			Z		
+			class Child extends Parent1,Parent2
+			{
+			
+			
+			Child child =new Child();
+			child.m1();//confused
+			
+			}
+			
 					
 					
 					

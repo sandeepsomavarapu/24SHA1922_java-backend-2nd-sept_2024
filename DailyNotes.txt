@@ -314,17 +314,112 @@ concrete methods:with implementation/body/logic (non-abstract)
 			child.m1();//confused
 			
 			}
+polymorphisam,Encapsulation,public,private,protected,default,final,this,super,constructor
+
+
+polymorphisam:-
+==============
+
+				method overloading/compile time polymorphisam/static binding
+				method overriding/run time polymorphisam/dynamic binding
+					
+					
+		method overloading:
 			
+				method name is same but signature is different.
+				
+										no of params
+										order of params
+										type of params
+		method overriding:
+		==================
+				method name is same but implementation/body/logic is different
 					
 					
-					
-					
-					
-					
+			class Parent{
+			1000 methods
+			
+			}		
+			class Child{
+			
+			
+			}	
+				
+				@Override
+	
+final keyword can be used before the variable,method,class	
+				
+				final variables are fixed ,we cannot change the value of final variable
+				final methods ,we cannot override the final methods
+				final classes,extending final classes not possible
 				
 				
 				
 				
+constructor:
+============
+			intialization of object
+			
+			int a;
+			a=12;
+	
+	
+	
+	classname objname=new classname();
+	classname objname=new constructor();
+	class Test{
+	
+	public int add(int a,int b)
+	{
+	return a+b;
+	}
+	
+	main()
+	{
+	Test test =new Test();
+	test.add(12,23);
+	
+	}
+	
+	
+	}
+this,super
+
+this ,which is used to represent current class properties(variable,method,constructor,object)
+super ,which is used to represent parent class properties(variable,method,constructor)
+
 				
+public,private,protected,default:
+===================================				
 				
+		public :every where 
+		private:class level scope
+		default:package level scope
+		protected:package level scope and outside the package when ever it is child we can access
+				
+Encapsulation:
+==============
+	wrapping up of the data and its corresponding  behaviour together 
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				

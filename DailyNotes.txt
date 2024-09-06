@@ -403,18 +403,56 @@ Encapsulation:
 		
 		
 
+String,StringBuffer,StringBuilder:	java.lang
+==================================
+		String is imuttable
+		StringBuffer,StringBuilder are muttable
+
+		StringBuffer methods are  synchronized(thread safe)
+		StringBuilder methods are not synchronized(no thread safe)
+		
+
+		String orgname="";//literal
+		
+		String name=new String("");
+		
+		once we declared string we cannot change the value
+
+
+
+			public void m1()
+			{										theards
+			.										t1,t2,t3
+			.
+			.
+			.
+			
+			}
+
+			public synchronized void m1()
+			{
+			.
+			.
+			.
+			.
+			
+			}
+
+	String:
+	======literal
+	heap area-->String constant pool
+	
+		
+			-->duplicates are not allowed 
 
 
 
 
 
+Assignments
 
 
-
-
-
-
-
+corejava basics -->3
 
 
 

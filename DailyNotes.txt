@@ -455,6 +455,42 @@ Assignments
 corejava basics -->3
 
 
+Exception Handling:
+====================
+
+the problems without exception handling
+
+		1)system defined error messages
+		2)abnormal termination
+
+
+
+the advantages with exception handling
+
+		1)user friendly  error messages
+		2)normal termination
+
+
+		try,catch,finally,throw,throws
+
+
+		
+NOTE:
+1)By default package for every java file is java.lang
+2)By Default parent class for every java class is java.lang.Object
+3)By Default parent class for every Exception class is java.lang.Throwable
+
+
+
+
+1)extends Exception/RuntimeException/Throwable
+2)param constructor
+
+
+
+
+
+
 
 
 

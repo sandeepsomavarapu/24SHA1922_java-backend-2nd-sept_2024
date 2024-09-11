@@ -489,6 +489,77 @@ NOTE:
 
 
 
+File IO/Stream IO
+
+stream-->flow of data
+
+			variables,arrays,object,collections--not permanant
+			
+			files,database					   -->permanant
+
+
+
+		java<--->File
+
+java.io
+
+	streams
+	
+	charcter stream		FileWriter,BufferedWriter,PrintWriter,FileReader,BufferedReader
+	buffered stream		BufferedOutputStream,BufferedInputStream  1024 bytes
+	byte stream			FileOutputStream,FileInputStream			2 bytes
+	data stream			DataInputStream,DataOutputStream
+	object stream		ObjectOutputStream,ObjectInputStream   java object
+	
+
+			java object --->byte data-->serialisation
+
+Collections Framework:
+=======================
+
+variables-->one value
+
+arrays--->group of value
+
+		1.arrays will allow similar data 
+		2.fixed in size   AIOE/not growable in  nature 
+		3.no utility methods
+		
+	Advantages with collections
+	
+		1.homogeneous and haterogenous objects 
+		2.not fixed in size / growable in nature   AL-10,-->16(cc*3/2)+1
+		3.lots of utility methods
+		
+			
+										Collection		-->java.util
+		
+							List 			Set				Queue
+		1.duplicates are allowed
+		2.insertion order is followed
+		
+					LinkedList
+					ArrayList-->not synchronized
+					Vector-->synchronized
+					Stack--->FILO
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
 
 
 

@@ -544,19 +544,107 @@ arrays--->group of value
 					Stack--->FILO
 		
 		
+		In Every collection class we can store both homogeneous and heterogeneous data except treeset and treemap
+		
+			
+			compareTo-->Comparable(I)
+			
+			Interface-->collection of abstract methods
+			marker Interface--->zero abstract methods(empty interface)ex:Serializable
+			Functional Interface-->SAM-->Single abstract method
 		
 		
 		
 		
-		
-		
-		
+		returns -ve if obj1 has to come before obj2
+		returns +ve if obj1 has to come after obj2  1
+		returns 0 if both are same
 
 
+	 java.lang.Comparable-->FI-->compareTo-->NSO
+	 java.util.Comparator-->FI-->compare-->CSO
+
+Queue(I):
+	
+		PriorityQueue
+		PriorityBlockingQueue
 
 
+MAP:
+====
+		key,value-->entry	
 
+				key and value can be any DT
+				
+				key must be unique and value can be duplicate
+				
+				studId  		studName--->Entry-->key,value
+				123				 mahesh
+				
+				
+				HashMap			duplicate keys are not allowed,values can be duplicate and insertion order is  not followed.
+				
+				LinkedHasshMap  duplicate keys are not allowed,values can be duplicate and insertion order is  followed.
+				
+				SM/NM/TreeMap 	duplicate keys are not allowed,values can be duplicate and insertion order is  not followed 
+								but it follows sorting order of keys.
+				
+				
+				
+					
+		Employee
+		empid		private
+		empname
+		salary
+		designation
+		location
+		
+	public
+	
+10 employee-->collections
+			main
+			collection-->
+			
+			
+				123/sandeep
+				
+				
+				
+	1)display the Employee details based on id or name   
+	
+	
+	2)display the names of employees who are getting the salary greater than the 60000			
+				
+				
+	3) display the max salary			
+				
+	4)display the sum of salaries of all the employees			
+				
+	5)display the names of all employees who are working in 'Pune'			
+				
+	6)display all employees based on salary ascending			
+				
+	7)display all employees who are working as managers	
 
+	8)display the sum of salaries of employees who are working as managers
+	
+	9)display the ids of all employees
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 
 
 

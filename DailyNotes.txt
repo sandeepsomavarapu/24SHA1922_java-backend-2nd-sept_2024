@@ -551,7 +551,7 @@ arrays--->group of value
 			
 			Interface-->collection of abstract methods
 			marker Interface--->zero abstract methods(empty interface)ex:Serializable
-			Functional Interface-->SAM-->Single abstract method
+			Functional Interface-->SAM-->Single abstract method:Comparator/Comparable/Runnable
 		
 		
 		
@@ -564,7 +564,7 @@ arrays--->group of value
 	 java.lang.Comparable-->FI-->compareTo-->NSO
 	 java.util.Comparator-->FI-->compare-->CSO
 
-Queue(I):
+Queue(I):FIFO
 	
 		PriorityQueue
 		PriorityBlockingQueue
@@ -584,7 +584,7 @@ MAP:
 				
 				HashMap			duplicate keys are not allowed,values can be duplicate and insertion order is  not followed.
 				
-				LinkedHasshMap  duplicate keys are not allowed,values can be duplicate and insertion order is  followed.
+				LinkedHashMap  duplicate keys are not allowed,values can be duplicate and insertion order is  followed.
 				
 				SM/NM/TreeMap 	duplicate keys are not allowed,values can be duplicate and insertion order is  not followed 
 								but it follows sorting order of keys.
@@ -622,7 +622,7 @@ MAP:
 				
 	5)display the names of all employees who are working in 'Pune'			
 				
-	6)display all employees based on salary ascending			
+	6)DISPLAY ALL EMPLOYEES BASED ON SALARY ASCENDING			
 				
 	7)display all employees who are working as managers	
 
@@ -632,27 +632,70 @@ MAP:
 				
 				
 				
+Threads:
+=======				
+				
+		multi tasking:executing several tasks simultaniously
+
+		Process based multi tasking:OS
+			executing several tasks simultaniously where each and every task is seperate independent process
+		thread based multi tasking /multi threading
+			executing several tasks simultaniously where each and every task belongs to same process
+			process:it is a collection of threads
+			thread: it is smallest unit of process
 				
 				
 				
+	thread based multi tasking /multi threading			
+				
+			two ways
+
+			1.implements Runnable
+			2.extends Thread 
 				
 				
-				
-				
-				
-				
-				
-				
-				
-				
+Thread life cycle
+
+sleep()
+start()
+run()
+currentThread()
+setName()
+getName()
+setPriority()
+getPriority()
+wait()
+notify()
+notifyAll()
+yield()
+synchronized keyword
 
 
+1....100
 
+even-->2,4,6,8,....100 -->2,wait(),notify(),4
+odd -->1,3,5,7,9....99	-->1,wait(),3,wait(),notify()
 
-
-
-
-
-
-
+1,2
+				
+Product	Management App			
+	1.ADD Product
+	2.Update product
+	3.Delete product
+	4.Get Product			
+	5.Get All Products
+	6.Get Products between the prices
+	7.get products by category
+	8.exit
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				

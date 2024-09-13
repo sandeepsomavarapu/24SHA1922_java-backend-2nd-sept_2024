@@ -690,12 +690,160 @@ Product	Management App
 				
 				
 				
+	variables-->arrays-->Collections	
 				
 				
+		 List list = Collections.synchronizedList(new ArrayList(...));		
 				
+			Map m = Collections.synchronizedMap(new HashMap(...));	no performance
 				
-				
-				
-				
-				
+			SortedSet s = Collections.synchronizedSortedSet(new TreeSet(...));	
+			
+			
+			concurrent collections
+			
+			HashMap--16	--->no thread safety
+			
+			ConcurrentHashMap
+			
+					thread safety-->bucket level locking/segment level locking
+					performance
+			
+			
+			
+			Collections
+			String/SB/SB
+			exception handling
+			instance/static
+			oops
+			
+Java 8 Features:
+================			
+			
+			100 lines 
+			
+		functional programming-->day-1 1993 python	50 lines
+			
+			
+			2014 -->functional programming
+			
+			
+	lambda Expressions		
+			
+	Functional INTERFACES
+
+	method reference/constructor reference ::
+	
+	default and static methods
+	
+	predefined FI 40+
+	
+	Date and Time  LocalDate
+	
+	stream api
+	
+	optional class
+	
+			
+			
+			
+	Lambda Expressions:
+==========================	
+			
+			
+			accessmodifer return type static/instance methodname(parameterDT paramname,....)
+			{
+			.
+			.
+			.
+			.
+			return null;
+			}
+			
+			public int add(int a,int b)
+			{
+				return a+b;
+			}
+			anonymous function/name less
+			
+			1.no access modifier
+			2.no method name
+			3.return keyword is optional
+			4.curly braces are optional
+			5.parameter datatypes are optional when they are same datatype
+			6.paranthesis are also optional where we have one param
+			7.return keyword with curly braces mandatory
+			
+			
+			  (a,b)->a+b;
+			
+			Test
+			public int squareIt(int a)
+			{
+				return a*a;
+			}
+			
+			a->a*a;
+			
+			public void printLength(String name)
+			{
+			System.out.println(name.length);
+			}
+			
+			
+			name->System.out.println(name.length);
+			
+		Functional Interfaces :	SAM
+		
+		default and static methods
+		
+		@Override
+		
+		@FunctionalInterface
+		
+		java.util.function
+	
+		Predicate--->test()-->parameter can be anything return type  boolean
+	IntPredicate
+		Function -->apply()-->parameter can be anything and return type can anything
+		Consumer -->accept()-->no return but parameter can be anything
+		Supplier -->get()
+		https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+		::
+		
+	Stream API:
+	==========
+	
+		stream -->flow of data
+			
+			
+			
+			list.stream()
+			
+			
+			intermediate
+			terminal
+			
+			input-->stream()-->operation1--->operation2-->terminal -->stream()
+			
+	Database	
+	case study
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
 				

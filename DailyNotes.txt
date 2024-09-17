@@ -826,24 +826,289 @@ Java 8 Features:
 			
 			input-->stream()-->operation1--->operation2-->terminal -->stream()
 			
-	Database	
-	case study
+	Database	-->JDBC
+	
+	case study  --->Collections
+			
+		Product	Management App			
+	1.ADD Product
+	2.Update product
+	3.Delete product
+	4.Get Product			
+	5.Get All Products
+	6.Get Products between the prices
+	7.get products by category
+	8.exit	
+	
+	Layered Architecture:
+	===================
+	
+			presentation layer-->user interaction code
 			
 			
+			Service layer/busines logic layer -->main logic
+			
+												DTO/POJO
+			repository layer/DAO layer
 	
 	
 	
+	Files:
+	DATABASE:
+			RDBMS     NOSQL
+			
+			oracle,db2,mysql,postgres.....
+			
+			tables-->rows and columns
+			
+			https://dev.mysql.com/downloads/installer/
+			
+#DDl-->create,alter,drop,truncate,rename
+#DML-->Insert,update,delete
+#DRL-->select
+#constraints
+#joins
+#functions
+
+
+DDL:
+-------create,alter,drop,truncate,rename
+
+
+constraints:
+===============
+
+
+eid 	ename	 	esal 		edesg 	 	deptno	 	deptname 	 deptloc
+1		X			2300		admin		 10			 sales		  hyderabad	
+2		Y			3200		hr			 20			 marketing	  delhi	
+3		Z			1230		hr			 20			 marketing	  delhi	
+4		A			3211		developer	 30			 programming  mumbai	
+5		B			9010		developer	 30			 programming  mumbai
+6		C			2122		admin		 10			 sales		  hyderabad
+
+
+dept
+		pk
+	 deptno	 	deptname 	 deptloc
+	 10			 sales		  hyderabad	
+	 20			 marketing	  delhi		
+	 30			 programming  mumbai
+	 
+	 
+employees
+											FK
+eid 	ename	 	esal 		edesg 	 	deptno	 	
+1		X			2300		admin		 10			 
+2		Y			3200		hr			 20			 
+3		Z			1230		hr			 20			 
+4		A			3211		developer	 30			 	
+5		B			9010		developer	 30			 
+6		C			2122		admin		 10			 
+
+drop database ericsson;
+create database ericsson;
+use ericsson;
+#DDl-->create,alter,drop,truncate,rename
+create table employees(empid int,ename varchar(20),esal float,desg varchar(20));
+alter table employees add column eadd varchar(20);
+describe employees;
+alter table employees drop eadd;
+alter table employees change empid eid int;
+alter table employees rename to emps;
+truncate table emps;#empty
+drop table emps;
+create table emps as select * from employees;
+create table emps1 as select * from employees where 1=2;
+
+#DML-->Insert,update,delete
+insert into employees values(1,"suresh",9000,"developer");
+insert into employees values(2,"mahesh",21111,"trainer");
+insert into employees values(3,"rajesh",22200,"admin");
+insert into employees values(4,"naresh",32222,"hr");
+insert into employees values(5,"hitesh",90000,"admin");
+insert into employees values(6,"kumar",85000,"developer");
+insert into employees(empid,ename)values(7,'sandeep');
+update employees set esal=esal+5000;
+update employees set esal=esal+2000 where desg="developer";
+alter table employees add address varchar(10);
+update employees set address='hyderabad' ;
+delete from employees;
+delete from employees where empid=1;
+truncate table employees;
+select * from employees;
+select empid,ename from employees;
+select * from employees where desg='admin';
+select * from employees group by desg;
+select max(esal) from employees;
+select min(esal) from employees;
+select avg(esal) from employees;
+select count(esal) from employees;
+select sum(esal) from employees;
+select * from employees order by esal desc;
+insert into employees(empid,ename)values(7,'sandeep');
+
+
+insert into employees values(1,"suresh",9000,"developer","hyderabad");
+#notnull,check,unique,primary key,foreign key
+
+create table emp_info(empid int primary key,ename varchar(20) not null,esal float check(esal>10000),desg varchar(20));
+
+insert into emp_info values(1,"suresh",19000,"developer");
+insert into emp_info(empid,esal) values(2,19000);
+#DRL-->select
+#constraints
+#joins
+#functions
+
+drop table dept;
+drop table emp;
+
+CREATE TABLE dept(
+    deptno INT,
+    dname VARCHAR(14),
+    loc VARCHAR(13),
+	constraint pk_dept primary key (deptno)
+);
+INSERT INTO dept(deptno, dname, loc) VALUES
+(10, 'ACCOUNTING', 'NEW YORK'),
+(20, 'RESEARCH', 'DALLAS'),
+(30, 'SALES', 'CHICAGO'),
+(40, 'OPERATIONS', 'BOSTON');
+
+
+CREATE TABLE emp(
+    empno INT,
+    ename VARCHAR(10),
+    job VARCHAR(9),
+    mgr INT,
+    hiredate DATE,
+    sal DECIMAL(7,2),
+    comm DECIMAL(7,2),
+    deptno INT,
+   constraint pk_emp primary key (empno),
+   constraint fk_deptno foreign key (deptno) references dept (deptno)
+);
+
+INSERT INTO emp VALUES
+(7839, 'KING', 'PRESIDENT', null, '1981-11-17', 5000, null, 10),
+(7698, 'BLAKE', 'MANAGER', 7839,'1981-05-01', 2850, null, 30),
+(7782, 'CLARK', 'MANAGER', 7839, '1981-06-09', 2450, null, 10),
+(7566, 'JONES', 'MANAGER', 7839, '1981-04-02',2975, null, 20),
+(7788, 'SCOTT', 'ANALYST', 7566, '1981-04-19',3000, null, 20),
+(7902, 'FORD', 'ANALYST', 7566, '1981-03-12', 3000, null, 20),
+(7369, 'SMITH', 'CLERK', 7902,'1980-12-17', 800, null, 20),
+(7499, 'ALLEN', 'SALESMAN', 7698,'1981-02-20', 1600, 300, 30),
+(7521, 'WARD', 'SALESMAN', 7698, '1981-02-22',1250, 500, 30),
+(7654, 'MARTIN', 'SALESMAN', 7698,'1981-09-28',1250, 1400, 30),
+(7844, 'TURNER', 'SALESMAN', 7698,'1981-09-08',1500, 0, 30),
+(7876, 'ADAMS', 'CLERK', 7788, '1987-05-23',1100, null, 20),
+(7900, 'JAMES', 'CLERK', 7698,'1981-03-12',950, null, 30),
+(7934, 'MILLER', 'CLERK', 7782,'1982-01-23',1300, null, 10);
+
+select * from emp;
+select * from dept;
+delete from dept  where deptno=30;
+
+drop table emp;
+drop table dept;
+
+select ename,sal from emp;
+select e.ename,e.sal,d.dname from emp e ,dept d;#cross join
+select e.ename,e.sal,d.dname from emp e ,dept d where e.deptno=d.deptno;#inner join
+insert into emp(empno,ename,sal) values(12,'sandeep',9000);
+select e.ename,e.sal,d.dname from emp e left outer join dept d on e.deptno=d.deptno;#left outer join
+select e.ename,e.sal,d.dname from emp e right outer join dept d on e.deptno=d.deptno;#left outer join
+
+
+
+
+
+spring framework:
+==================	
+	spring is non-invasive framework ,which is used to create light weight and loosley coupled applications		
+		framework	
+			invasive		:Sturts,it will force developer to implement predefined api
+			non-invasive	:spring ,hibernate:it will never force developer to implement predefined api
+			
+			light weight 
+			heavy weight 
+			
+			
+			loosley coupling
+			tightly coupling
+			
+			
+			
+			
+			servlet
+			1) implement Servlet
+			2)extends GenericServlet
+			3)extends HttpServlet   12 methods
+			
+			1000*12
+			class Login extends HttpServlet
+			{
+			
+			
+			}
+			//heavy weight 
+			//light weight 
+			
+			
+			EJB--->Rod JOhnson  2003 1.x
+			
+			
+			loosley coupled
+			
+		object life cycle -->container -->BeanFactory,ApplicationContext
+	
+			1)Creation of object
+			2)wiring the objects
+			3)configuraing the objects
+			4)Destroying the object
 	
 	
 	
+	class Test			config
+							xml				container
+							annotation
+							java config
 	
+	class Client
 	
+		Test test=
 	
-	
-	
-	
-	
-	
+		
+		spring modules
+		SPRING CORE	/dependency injection module/IOC
+		spring jdbc
+		spring orm
+		spring web
+		spring aop
+		spring security
+		spring rest
+		....
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 				

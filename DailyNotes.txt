@@ -1028,7 +1028,7 @@ spring framework:
 ==================	
 	spring is non-invasive framework ,which is used to create light weight and loosley coupled applications		
 		framework	
-			invasive		:Sturts,it will force developer to implement predefined api
+			invasive		:Struts,it will force developer to implement predefined api
 			non-invasive	:spring ,hibernate:it will never force developer to implement predefined api
 			
 			light weight 
@@ -1058,6 +1058,8 @@ spring framework:
 			
 			EJB--->Rod JOhnson  2003 1.x
 			
+									 6.x
+			
 			
 			loosley coupled
 			
@@ -1070,7 +1072,7 @@ spring framework:
 	
 	
 	
-	class Test			config
+	class Test			config file
 							xml				container
 							annotation
 							java config
@@ -1089,16 +1091,57 @@ spring framework:
 		spring security
 		spring rest
 		....
+					<beans><bean id, class autowire,primary>
+		Setter Injection		<property name="" value,ref>
+		constrctor injection	<constructor-arg>
+		autowiring
+		
+			autowire
+		
+		
+		xml-->annotation
+		
+		@Override
+		@FunctionalInterface
+		
+		
+		@Component/@Serivce/@Repository/@Controller  <bean autowire class=>
+		@Scope("prototype")
+	class Employee{
+	
+	@Autowired //by type
+	@Qualifier
+	Address address;		@Primary @Scope @Value @ComponentScan("com.ericsson")@Configuration
+	
+	@Autowired //byname
+	setter method
+	
+	@Autowired
+	constrctor
+	}	
+		@Component
+	class Address{
+	
+	
+	}		
 		
 		
 		
+	BeanFactory is lazy 
+
+	ApplicationContext is eager
 		
 		
 		
+		Java config
+		@Bean<bean>
+		
+NOTE:
+spring has given annotations for user defined classes but not for predefined classes
+															like entitymaneger,transaction,datasource,server
 		
 		
-		
-		
+		Spring boot -->AutoConfiguration
 		
 		
 		

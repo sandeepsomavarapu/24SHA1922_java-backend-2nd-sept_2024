@@ -1145,13 +1145,65 @@ spring has given annotations for user defined classes but not for predefined cla
 		
 		
 		
+		JAVA---->Database 
+		
+		sun micro system--->jdbc api
+		
+		java.sql
+		
+		5 steps
 		
 		
+		loading the driver class
+		creating the connection
+		create statement
+		execute query
+		close the connection
 		
 		
+		JDBC
+		1)table creation
+		2)all the queries
+		3)checked exceptions
+		4)boiler plate code
 		
+		jpa  java persistence api-->specification
+		1)no table creation
+		2)no queries/Db Independent queries
+		3)un-checked exceptions
+		4)2-3	
 		
+	JPA	implementation ORM tools(Object relational mapping)
+					hibernate,eclipselink,toplink,ibatis....
 		
+
+	JPA 	
 		
+		persistence.xml
 		
+		database properties
+				url
+				username
+				password
+				driver class
+		
+		hibernate properties
+				dialect class
+				hbm2ddlauto
+				show_Sql
 				
+				
+		<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+<persistence-unit name="mysql" transaction-type="RESOURCE_LOCAL">
+<properties>
+<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cts"/>
+<property name="javax.persistence.jdbc.user" value="root"/>
+<property name="javax.persistence.jdbc.password" value="rpsconsulting"/>
+<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+<property name="hibernate.hbm2ddl.auto" value="create"/>
+<!--  create/update  -->
+<property name="hibernate.show_sql" value="true"/>
+</properties>
+</persistence-unit>
+</persistence>

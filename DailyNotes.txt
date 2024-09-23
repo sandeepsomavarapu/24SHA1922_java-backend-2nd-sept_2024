@@ -1084,8 +1084,8 @@ spring framework:
 		
 		spring modules
 		SPRING CORE	/dependency injection module/IOC
-		spring jdbc
-		spring orm
+		spring jdbc		-->loosley coupled(queries)
+		spring orm/jpa  -->jpa(light weight),tigtly coupled
 		spring web
 		spring aop
 		spring security
@@ -1193,7 +1193,7 @@ spring has given annotations for user defined classes but not for predefined cla
 				show_Sql
 				
 				
-		<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
 <persistence-unit name="mysql" transaction-type="RESOURCE_LOCAL">
 <properties>
 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cts"/>
@@ -1207,3 +1207,115 @@ spring has given annotations for user defined classes but not for predefined cla
 </properties>
 </persistence-unit>
 </persistence>
+
+
+frameworks
+
+MYSQL-->db dependent query
+
+select eid,ename from emps_india;		MYSQL
+select empId,empName from Employee;		JPQL
+
+
+JPQL -->db independent query
+
+
+Relationship-->
+
+has-a-->association
+	aggregation composition
+
+
+class Employee
+{
+
+@OnettoOne
+private Address adress;//has-a
+}
+
+
+corejava
+database
+spring core
+jdbc
+jpa
+
+spring:
+		configuration
+		server
+		maven dependencies
+
+		hibernate/jpa/database/spring/springorm/server/java/junit
+Spring boot
+		
+		1)auto configuration	:most of the commonly used classes already configured by the spring boot
+		2)embeded server(tomcat)
+		3)starters		maven dependecies		starter parent
+		4)actuators  health/metrics/beans.... insite about project  actuator
+		5)in memory DB H2		
+
+
+	spring tool suite-->eclipse
+	
+spring boot 3.x-->STS-->spring starter project
+
+STS
+
+8080
+
+
+
+
+REST
+
+Webservices:
+============
+ it is a technology which is used to make communication between two interoperable apps
+
+			Bank App<---->SBI ATM--> rbl atm card
+
+			phonepe--->apps
+			
+			
+			webservices
+
+
+RMI,EJB,SP     --->JAVA
+
+DCOM		  --->.net
+
+RPC			  ---> c/C++
+
+CORBA		  -->failed
+
+webservices  --->interoperable
+
+		SOAP-
+		REST
+
+webservices-->architecture
+
+API-->packages-->interfaces,classes
+
+JPA--api
+
+springbootrestjpahibernate
+
+hikari datasource
+
+
+
+
+	public abstract String addProduct(Product product);
+
+	public abstract Product updateProduct(Product product);
+
+	public abstract String deleteProduct(int productId);
+
+	public abstract Product getProduct(int productId);
+
+	public abstract List<Product> getAllProducts();
+
+	public abstract List<Product> getProductsBetween(float intialPrice, float finalPrice);
+
+	public abstract List<Product> getProductsByCategory(String productCategory);

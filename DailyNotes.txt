@@ -1337,3 +1337,13 @@ spring.datasource.password=rpsconsulting
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
 spring.jpa.show-sql=true
+
+
+
+{
+    "productId":123,
+    "productName":"samsung",
+    "productPrice":23450,
+    "productCategory":"electronics",
+    "productQunatity":20
+}

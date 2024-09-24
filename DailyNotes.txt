@@ -1417,3 +1417,79 @@ public class ProductController {
 	}
 
 }
+
+Product	Management App			
+	1.ADD Product
+	2.Update product
+	3.Delete product
+	4.Get Product			
+	5.Get All Products
+	6.Get Products between the prices
+	7.get products by category
+	8.exit
+
+
+
+		database --->layered architecture-->jpa/hibernate/spring--->loosley coupled/light weight
+
+			database
+			server jars/rest/web
+			jpa 
+			hibernate
+			spring
+			java
+			unit testing		starter parent
+			
+		
+		zero XML				auto configuration
+
+								embeded server 
+								actuators
+
+Repository
+CrudRepository(CRUD)
+PagingAndSorting
+ListPagingAndSorting
+ListCrudRepository
+JpaRepository
+
+
+public abstract List<Product> getAllProducts();
+public abstract List<Product> getProductsBetween(int intialPrice, int finalPrice);
+public abstract List<Product> getProductsByCategory(String productCategory);
+
+
+DSL--domain specific lang
+
+
+Exception handing
+		try,catch,finally,throw,throws
+	
+validations					MethodArgumentNotValidException
+
+							ProductNotFoundException
+
+		1.Controller Level exception handling
+		2.Application Level exception handling
+		
+security
+		security
+		oauth
+		jwt-->JSON WEB TOKEN
+		
+		
+		
+		authentication		id card
+		autherization       
+		
+		
+		
+
+
+spring cloud micorservices
+kafka
+
+
+
+
+

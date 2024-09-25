@@ -1487,6 +1487,28 @@ security
 
 
 spring cloud micorservices
+
+
+
+
+create database authenticationdb;
+create database orderdb;
+create database productdb;
+create database shoppingcartdb;
+use authenticationdb;
+insert into users values(123,'mypass','myuser');
+use productdb;
+insert into products values(112,'mobile','image','samsung',90000);
+insert into products values(113,'appreal','image','lee',21000);
+insert into products values(114,'laptop','image','sony',78000);
+
+
+
+
+
+
+
+
 kafka
 
 
